@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { PresentView, ExitView, IntroView } from './page';
 
@@ -42,7 +42,9 @@ function wrapView(child: JSX.Element) {
   return (
     <Box w="100vw"
         h="100vh">
-      {child}
+      <Center>
+        {child}
+      </Center>
     </Box>
   );
 }
