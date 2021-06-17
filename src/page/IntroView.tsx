@@ -1,5 +1,8 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Box, Heading, Image, VStack } from "@chakra-ui/react";
+
+import feelsBirthdayManImage from "/assets/FeelsBirthdayMan.3x.png";
+import clapImage from "/assets/Clap.3x.gif";
 
 export interface IIntroViewProps {
     onProgress: () => void;
@@ -12,5 +15,15 @@ export const IntroView = () => {
     // Blurb
     // Audio button
     // (trig) confirm
-    return <Text size="l" color="#ddd">Yo</Text>;
+    return (
+        <VStack mt={48} shouldWrapChildren>
+            <Box>
+                <Image display="inline" src={feelsBirthdayManImage} />
+                <Image display="inline" src={clapImage} />
+            </Box>
+            <Heading size="lg" mt={20}>
+                Yo John,
+            </Heading>
+        </VStack>
+    );
 }
