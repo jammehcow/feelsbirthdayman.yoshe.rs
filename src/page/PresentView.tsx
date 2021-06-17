@@ -41,7 +41,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                     <Present src={present01}
                         audioClip="/assets/oot_reveal.mp3"
                         revealDelay={7900}
-                        volume={0.3}
+                        volume={0.5}
                         title="A cameo from Carolina Ravassa"
                         width="20vh">
                         <video src="/assets/cameo.mp4"
