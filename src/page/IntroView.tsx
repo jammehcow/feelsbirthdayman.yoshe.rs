@@ -66,6 +66,14 @@ export const IntroView = () => {
                 </Button>
                 to enable TTS
             </Text>
+            <Container>
+                <Text mt={10} align="center" fontSize="lg">
+                    Happy birthday Mr Yoshi from everyone in your community. We thought we'd put together a few cool things to celebrate this&nbsp;
+                    <Text as="s">unfortunate</Text> exciting occasion of turning 15.
+                    <br />
+                    Pog
+                </Text>
+            </Container>
         </VStack>
     );
 }
