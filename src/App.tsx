@@ -31,12 +31,12 @@ const App = () => {
 
   switch (progress) {
     case ProgressionState.GIFTS:
-      return wrapView(<PresentView />);
+      return wrapView(<PresentView onAllOpened={() => setProgress(ProgressionState.EXIT)} />);
     case ProgressionState.EXIT:
       return wrapView(<ExitView />);
     // Don't need to explicitly handle ProgressionState.INTRO
     default:
-      return wrapView(<IntroView />);
+      return wrapView(<IntroView onProgress={() => setProgress(ProgressionState.GIFTS)} />);
   }
 }
 
