@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@chakra-ui/react": "./@chakra-ui/react.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js",
+    "react-emoji-render": "./react-emoji-render.js"
+  }
+}

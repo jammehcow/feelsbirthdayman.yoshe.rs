@@ -7,6 +7,7 @@ export default {
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
+    '@snowpack/plugin-webpack',
     [
       '@snowpack/plugin-typescript',
       {
@@ -20,16 +21,15 @@ export default {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    //bundle: true,
+    minify: true,
+    target: 'es2018',
   },
   packageOptions: {
-    /* ... */
   },
   devOptions: {
-    /* ... */
   },
   buildOptions: {
-    /* ... */
+    baseUrl: "./"
   },
 };

@@ -41,7 +41,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                     <Present src={present01}
                         audioClip="/assets/oot_reveal.mp3"
                         revealDelay={7900}
-                        volume={0.3}
+                        volume={0.5}
                         title="A cameo from Carolina Ravassa"
                         width="20vh">
                         <video src="/assets/cameo.mp4"
@@ -90,9 +90,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                                 height="100%"
                                 src="https://www.youtube.com/embed/5LePOlgi_IA"
                                 title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen />
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"/>
                         </Box>
                     </Present>
                     <Present src={present05}
