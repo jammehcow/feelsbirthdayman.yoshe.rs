@@ -3,6 +3,7 @@ import React from "react";
 
 import {Present} from "../component";
 import pagChompImage from "/assets/PagChomp.3x.png";
+import matArtImage from "/assets/matArt.png";
 
 export interface IPresentsViewProps {
     onAllOpened: () => void;
@@ -69,11 +70,35 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                         </LinkOverlay>
                     </LinkBox>
                 </Present>
-                {/* TODOL video from whal */}
-                {/* <Present src="/assets/present_04.png"
-                    title="Yo"
-                    width="25vh">
-                </Present> */}
+                <Present src="/assets/present_04.png"
+                      audioClip="/assets/cheese.mp3"
+                      revealDelay={300}
+                      volume={.3}
+                      title="Some weirdos saying/doing stuff"
+                      footer={<Text fontSize="md">by whaleship, cam top left</Text>}
+                      width="20vh">
+                    <Box w="100%" h="40vh">
+                        <iframe
+                              width="100%"
+                              height="100%"
+                              src="https://www.youtube.com/embed/5LePOlgi_IA"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen />
+                    </Box>
+                </Present>
+                <Present src="/assets/present_05.jpg"
+                      audioClip="/assets/dadSmash.mp3"
+                      revealDelay={3000}
+                      volume={.3}
+                      title="Fred reborn"
+                      footer={<Text fontSize="md">Art by Mat4ba</Text>}
+                      width="20vh">
+                    <Image src={matArtImage}
+                          w="40vw"
+                          alt="Dragon art by Mat4ba" />
+                </Present>
             </Flex>
             <Button colorScheme="green"
                   mt={20}
