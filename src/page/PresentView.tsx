@@ -47,7 +47,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                       volume={.2}
                       title="cbtDank does the wiggle"
                       width="20vh"
-                      footer={<h1>Clipped by twitch.tv/Abillaze</h1>}>
+                      footer={<Text fontSize="md">Clipped by twitch.tv/Abillaze</Text>}>
                     <video src="/assets/bill_twitchclip.mp4"
                           height="70vh"
                           onLoadStart={(v) => v.currentTarget.volume = .5}
