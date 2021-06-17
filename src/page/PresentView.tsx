@@ -90,9 +90,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                                 height="100%"
                                 src="https://www.youtube.com/embed/5LePOlgi_IA"
                                 title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen />
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"/>
                         </Box>
                     </Present>
                     <Present src={present05}
