@@ -18,6 +18,7 @@ export interface IPresentProps {
     src: string;
     width: string | number;
     title: string;
+    footer?: JSX.Element | Array<JSX.Element> | undefined;
     children: JSX.Element | Array<JSX.Element> | undefined;
 }
 
@@ -42,6 +43,9 @@ export const Present = ({title, src: imageSource, width, children}: IPresentProp
                             {children}
                         </Center>
                     </ModalBody>
+                    <ModalFooter>
+                        {footer}
+                    </ModalFooter>
                 </ModalContent>
             </Modal>
         </Box>
