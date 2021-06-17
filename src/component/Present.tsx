@@ -29,6 +29,7 @@ export const Present = ({title, src: imageSource, width, children}: IPresentProp
             <Image src={imageSource}
                   cursor="pointer"
                   w={width}
+                  p={6}
                   alt="Present clipart"
                   onClick={() => setModalOpen(true)} />
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} isCentered>
