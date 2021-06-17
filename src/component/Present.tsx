@@ -1,16 +1,46 @@
-import { Box, Image } from "@chakra-ui/react";
-import React from "react";
+import {
+    Box,
+    Button,
+    Center,
+    Image,
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    ModalOverlay,
+    Text
+} from "@chakra-ui/react";
+import React, { useState } from "react";
 
 export interface IPresentProps {
-    imageSource: string;
+    src: string;
     width: string | number;
-    modalContent: JSX.Element;
+    title: string;
+    children: JSX.Element | Array<JSX.Element> | undefined;
 }
 
-export const Present = ({imageSource, width, modalContent}: IPresentProps) => {
+export const Present = ({title, src: imageSource, width, children}: IPresentProps) => {
+    let [isModalOpen, setModalOpen] = useState(false);
+
     return (
         <Box>
-            <Image src={imageSource} alt="Present clipart" />
+            <Image src={imageSource}
+                  cursor="pointer"
+                  w={width}
+                  alt="Present clipart"
+                  onClick={() => setModalOpen(true)} />
+            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} isCentered>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>{title}</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        {children}
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
         </Box>
     );
 }
