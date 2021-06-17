@@ -50,10 +50,10 @@ export const IntroView = () => {
                 <Image display="inline" src={feelsBirthdayManImage} />
                 <Image display="inline" src={clapImage} />
             </Box>
-            <Heading size="lg" mt={20}>
+            <Heading size="xl" mt={20}>
                 Yo John,
             </Heading>
-            <Text mt={5} fontSize="lg">
+            <Text mt={5} fontSize="xl">
                 I know reading isn't your strongpoint so click
                 <Button mx={2}
                       variant="outline"
