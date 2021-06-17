@@ -35,7 +35,7 @@ export const Present = ({title, src: imageSource, width, children}: IPresentProp
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} isCentered>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>{title}</ModalHeader>
+                    <ModalHeader fontSize="xl">{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <Center>
