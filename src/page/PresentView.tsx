@@ -75,7 +75,11 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                     width="25vh">
                 </Present> */}
             </Flex>
-            <Button onClick={onAllOpened}>Click me</Button>
+            <Button colorScheme="green"
+                  mt={20}
+                  onClick={onAllOpened}>
+                I'm finished :)
+            </Button>
         </VStack>
     );
 }
