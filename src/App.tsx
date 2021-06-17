@@ -1,40 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { PresentView, ExitView, IntroView } from './page';
 
-interface AppProps {}
+/*
+ * The plan:
+ * Show page with FeelsBirthdayMan Clap and small desc
+ * Button to test audio (so he turns audio on for the site)
+ * Another button to go to present page
 
-function App({}: AppProps) {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
+ * Present page has 4 presents:
+ *  - Kudo
+ *  - Cameo
+ *  - Bil clip
+ *  - Whale vid
+ *
+ * When a present is clicked on, one of 4 audio files will play (OoT chest open, drum roll, Josh Widega, ???)
+ * Present opens fullpage modal with content
+ */
+
+enum ProgressionState {
+  INTRO = 0,
+  GIFTS = 1,
+  EXIT  = 2
+}
+
+const App = () => {
+  let [progress, setProgress] = useState(ProgressionState.INTRO);
+
+  switch (progress) {
+    case ProgressionState.GIFTS:
+      return wrapView(<PresentView />);
+    case ProgressionState.EXIT:
+      return wrapView(<ExitView />);
+    // Don't need to explicitly handle ProgressionState.INTRO
+    default:
+      return wrapView(<IntroView />);
+  }
+}
+
+function wrapView(child: JSX.Element) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <Box w="100vw"
+        h="100vh">
+      {child}
+    </Box>
   );
 }
 
