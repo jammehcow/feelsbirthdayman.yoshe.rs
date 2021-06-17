@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { Twemoji } from "react-emoji-render";
 
 import feelsBirthdayManImage from "/assets/FeelsBirthdayMan.3x.png";
