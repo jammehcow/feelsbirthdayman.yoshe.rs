@@ -13,7 +13,7 @@ export interface IIntroViewProps {
 
 const ttsAudioPlayer = new Audio(ttsSound);
 
-export const IntroView = () => {
+export const IntroView = ({onProgress}: IIntroViewProps) => {
     // Container
     // FeelsBirthdayMan Clap
     // Opt: TTS?
@@ -74,6 +74,7 @@ export const IntroView = () => {
                     Pog
                 </Text>
             </Container>
+            <Button mt={20} size="lg" colorScheme="cyan" onClick={onProgress}>Continue</Button>
         </VStack>
     );
 }
