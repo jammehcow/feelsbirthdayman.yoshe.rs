@@ -47,8 +47,8 @@ export const IntroView = ({onProgress}: IIntroViewProps) => {
     return (
         <VStack mt={48} shouldWrapChildren>
             <Box>
-                <Image display="inline" src={feelsBirthdayManImage} />
-                <Image display="inline" src={clapImage} />
+                <Image display="inline-block" src={feelsBirthdayManImage} pl={10} mr={5} alt="FeelsBirthdayMan BetterTTV emote" />
+                <Image display="inline-block" src={clapImage} alt="Clap BetterTTV emote" />
             </Box>
             <Heading size="xl" mt={20}>
                 Yo John,
