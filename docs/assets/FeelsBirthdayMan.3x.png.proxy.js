@@ -1,1 +1,1 @@
-export default"/assets/FeelsBirthdayMan.3x.png";
+export default"./assets/FeelsBirthdayMan.3x.png";

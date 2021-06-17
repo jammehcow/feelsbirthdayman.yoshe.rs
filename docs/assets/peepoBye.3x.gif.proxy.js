@@ -1,1 +1,1 @@
-export default"/assets/peepoBye.3x.gif";
+export default"./assets/peepoBye.3x.gif";

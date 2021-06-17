@@ -1,1 +1,1 @@
-export default"/assets/matArt.png";
+export default"./assets/matArt.png";
