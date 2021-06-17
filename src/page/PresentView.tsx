@@ -13,6 +13,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
             <Present src="/assets/present_01.png" title="A cameo from Carolina Ravassa" width="20vh">
                 <video src="/assets/cameo.mp4"
                       style={{"maxHeight": "60vh"}}
+                      onLoadStart={(v) => v.currentTarget.volume = .5}
                       controls />
             </Present>
             <Present src="/assets/present_02.png" title="Yo" width="20vh">
