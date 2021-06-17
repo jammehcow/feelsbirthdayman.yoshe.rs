@@ -2,6 +2,7 @@ import {
     Box,
     Button,
     Center,
+    Divider,
     Image,
     Modal,
     ModalBody,
@@ -36,7 +37,10 @@ export const Present = ({title, src: imageSource, width, children}: IPresentProp
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} isCentered>
                 <ModalOverlay />
                 <ModalContent p="10" minW="40vw">
-                    <ModalHeader fontSize="xl">{title}</ModalHeader>
+                    <ModalHeader fontSize="2xl">
+                        {title}
+                        <Divider />
+                    </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <Center>
