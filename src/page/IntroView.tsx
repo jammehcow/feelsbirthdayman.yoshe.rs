@@ -74,7 +74,13 @@ export const IntroView = ({onProgress}: IIntroViewProps) => {
                     Pog
                 </Text>
             </Container>
-            <Button mt={20} size="lg" colorScheme="cyan" onClick={onProgress}>Continue</Button>
+            <Button mt={20}
+                  size="lg"
+                  colorScheme="teal"
+                  rightIcon={<Twemoji text=":arrow_right:" />}
+                  onClick={onProgress}>
+                Continue
+            </Button>
         </VStack>
     );
 }
