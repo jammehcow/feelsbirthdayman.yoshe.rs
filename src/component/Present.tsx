@@ -37,7 +37,9 @@ export const Present = ({title, src: imageSource, width, children}: IPresentProp
                     <ModalHeader>{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        {children}
+                        <Center>
+                            {children}
+                        </Center>
                     </ModalBody>
                 </ModalContent>
             </Modal>
