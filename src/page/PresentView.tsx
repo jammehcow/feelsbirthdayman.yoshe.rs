@@ -1,5 +1,12 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 
-export const PresentView = () => {
-    return <></>;
+export interface IPresentsViewProps {
+    onAllOpened: () => void;
+}
+
+export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
+    return (
+        <Button onClick={onAllOpened}>Click me</Button>
+    );
 }
