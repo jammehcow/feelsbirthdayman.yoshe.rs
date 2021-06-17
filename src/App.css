@@ -1,0 +1,4 @@
+/* CSS hack to fix the Twemoji component rendering emoji images as blocks instead of inline */
+.twemoji img {
+    display: inline;
+}

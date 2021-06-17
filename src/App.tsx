@@ -2,6 +2,8 @@ import { Box, Center } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { PresentView, ExitView, IntroView } from './page';
 
+import './App.css';
+
 /*
  * The plan:
  * Show page with FeelsBirthdayMan Clap and small desc
