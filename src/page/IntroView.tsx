@@ -57,6 +57,7 @@ export const IntroView = ({onProgress}: IIntroViewProps) => {
                 I know reading isn't your strongpoint so click
                 <Button mx={2}
                       variant="outline"
+                      borderColor="#ccc"
                       pt={1}
                       size="sm"
                       fontSize="lg"
