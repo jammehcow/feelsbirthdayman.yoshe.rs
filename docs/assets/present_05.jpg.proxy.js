@@ -1,1 +1,1 @@
-export default"/assets/present_05.jpg";
+export default"./assets/present_05.jpg";

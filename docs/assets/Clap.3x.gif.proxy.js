@@ -1,1 +1,1 @@
-export default"/assets/Clap.3x.gif";
+export default"./assets/Clap.3x.gif";

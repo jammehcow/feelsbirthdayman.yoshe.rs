@@ -1,1 +1,1 @@
-export default"/assets/PagChomp.3x.png";
+export default"./assets/PagChomp.3x.png";

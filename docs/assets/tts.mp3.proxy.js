@@ -1,1 +1,1 @@
-export default"/assets/tts.mp3";
+export default"./assets/tts.mp3";
