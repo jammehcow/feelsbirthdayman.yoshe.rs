@@ -13,27 +13,50 @@ import {
     ModalOverlay,
     Text
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export interface IPresentProps {
     src: string;
     width: string | number;
     title: string;
+    audioClip: string;
+    volume?: number | undefined;
+    revealDelay: number;
     footer?: JSX.Element | Array<JSX.Element> | undefined;
     children: JSX.Element | Array<JSX.Element> | undefined;
 }
 
-export const Present = ({title, src: imageSource, width, children}: IPresentProps) => {
+export const Present = ({title, src: imageSource, width, children, footer, audioClip, revealDelay, volume}: IPresentProps) => {
     let [isModalOpen, setModalOpen] = useState(false);
+    let [hasOpened, setHasOpened] = useState(false);
+
+    useEffect(() => {
+        // Just sets the opacity as soon as the modal opens for the first time
+        if (isModalOpen)
+            setHasOpened(true);
+    }, [isModalOpen]);
+
+    function open() {
+        const audioSource = new Audio(audioClip);
+        if (!!volume) {
+            audioSource.volume = volume;
+        }
+        audioSource.play();
+
+        setTimeout(() => {
+            setModalOpen(true);
+        }, revealDelay);
+    }
 
     return (
         <Box>
             <Image src={imageSource}
+                  opacity={hasOpened ? 0.4 : 1}
                   cursor="pointer"
                   w={width}
                   p={6}
                   alt="Present clipart"
-                  onClick={() => setModalOpen(true)} />
+                  onClick={() => open()} />
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} isCentered>
                 <ModalOverlay />
                 <ModalContent p="10" minW="40vw">
