@@ -35,7 +35,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                       revealDelay={7900}
                       volume={0.3}
                       title="A cameo from Carolina Ravassa"
-                      width="25vh">
+                      width="20vh">
                     <video src="/assets/cameo.mp4"
                           style={{"maxHeight": "60vh"}}
                           onLoadStart={(v) => v.currentTarget.volume = .5}
@@ -46,7 +46,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                       revealDelay={4350}
                       volume={.2}
                       title="cbtDank does the wiggle"
-                      width="25vh"
+                      width="20vh"
                       footer={<h1>Clipped by twitch.tv/Abillaze</h1>}>
                     <video src="/assets/bill_twitchclip.mp4"
                           height="70vh"
@@ -58,7 +58,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                       revealDelay={700}
                       volume={.3}
                       title="Kudoboard from the Offliners"
-                      width="25vh">
+                      width="20vh">
                     <LinkBox>
                         <LinkOverlay href="https://www.kudoboard.com/boards/PbUvpgXX" isExternal>
                             <Image src="/assets/kudoboard-logo.webp"
