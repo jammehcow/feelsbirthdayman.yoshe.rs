@@ -55,7 +55,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                 </Present>
                 <Present src="/assets/present_03.png"
                       audioClip="/assets/win95_shutdown.mp3"
-                      revealDelay={800}
+                      revealDelay={700}
                       volume={.3}
                       title="Kudoboard from the Offliners"
                       width="25vh">
