@@ -1,4 +1,8 @@
 {
+  "name": "feelsbirthdayman",
+  "author": "jammehcow",
+  "license": "None",
+  "version": "1.0.4",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
