@@ -1,25 +1,18 @@
-# New Project
+# feelsbirthdayman.yoshe.rs
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+Just a simple present reveal site for [Masayoshi](https://twitch.tv/masayoshi) - a Pepega Twitch streamer.
 
-## Available Scripts
+## Running the project
 
-### npm start
+Runnning the project is easy if you have `yarn`.
+If you don't have yarn, you can install it using npm using `npm i -g yarn`.
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+After that you should be able to start the project using `yarn start` to start the Snowpack development server at `http://localhost:8080`
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## Building a release
 
-### npm run build
+Building is simple! Run `yarn build` for a production release. Currently this exports to `build/` (for good reason) whereas the GitHub pages website looks at `docs/`. To release, just copy the build directory into `docs/` (while keeping the `CNAME` file)
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+## License
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.mjs` config file.
-
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+Literally none, I don't care what you do here.
