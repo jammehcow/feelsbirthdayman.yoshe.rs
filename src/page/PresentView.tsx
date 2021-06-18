@@ -88,7 +88,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                             <iframe
                                 width="100%"
                                 height="100%"
-                                src="https://www.youtube.com/embed/HZYV7dKA5DQ"
+                                src="https://www.youtube.com/embed/YOMIvmsuWKc"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"/>
                         </Box>
