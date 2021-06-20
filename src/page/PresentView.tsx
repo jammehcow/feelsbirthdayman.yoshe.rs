@@ -1,5 +1,5 @@
-import { Box, Button, Flex, Heading, Image, LinkBox, LinkOverlay, ScaleFade, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Checkbox, Flex, Heading, Image, LinkBox, LinkOverlay, ScaleFade, Text, VStack } from "@chakra-ui/react";
+import React, { useState } from "react";
 
 import {Present} from "../component";
 import pagChompImage from "/assets/PagChomp.3x.png";
@@ -16,6 +16,10 @@ export interface IPresentsViewProps {
 }
 
 export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
+    let [shouldPlayAudio, setShouldPlayAudio] = useState(true);
+
+    const getAudio = (uri: string) => shouldPlayAudio ? uri : undefined;
+
     return (
         <ScaleFade in={true}>
             <VStack shouldWrapChildren>
@@ -31,15 +35,21 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                     <Text fontSize="lg" mt={4}>
                         Shitty images for shitty presents, pick one!
                     </Text>
+                    <Checkbox
+                          mt={10}
+                          defaultChecked
+                          onChange={(e) => setShouldPlayAudio(e.target.checked)}>
+                        Enable dramatic audio for presents
+                    </Checkbox>
                 </Box>
                 <Flex w="65vh"
-                    mt={32}
+                    mt={25}
                     ml="auto"
                     flexDir="row"
                     flexWrap="wrap"
                     justifyContent="space-around">
                     <Present src={present01}
-                        audioClip="/assets/oot_reveal.mp3"
+                        audioClip={getAudio("/assets/oot_reveal.mp3")}
                         revealDelay={7900}
                         volume={0.5}
                         title="A cameo from Carolina Ravassa"
@@ -50,7 +60,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                             controls />
                     </Present>
                     <Present src={present02}
-                        audioClip="/assets/drumroll.mp3"
+                        audioClip={getAudio("/assets/drumroll.mp3")}
                         revealDelay={4350}
                         volume={.2}
                         title="cbtDank does the wiggle"
@@ -62,7 +72,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                             controls />
                     </Present>
                     <Present src={present03}
-                        audioClip="/assets/win95_shutdown.mp3"
+                        audioClip={getAudio("/assets/win95_shutdown.mp3")}
                         revealDelay={700}
                         volume={.3}
                         title="Kudoboard from the Offliners"
@@ -78,7 +88,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                         </LinkBox>
                     </Present>
                     <Present src={present04}
-                        audioClip="/assets/cheese.mp3"
+                        audioClip={getAudio("/assets/cheese.mp3")}
                         revealDelay={300}
                         volume={.3}
                         title="Some weirdos saying/doing stuff"
@@ -94,7 +104,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                         </Box>
                     </Present>
                     <Present src={present05}
-                        audioClip="/assets/dadSmash.mp3"
+                        audioClip={getAudio("/assets/dadSmash.mp3")}
                         revealDelay={3000}
                         volume={.3}
                         title="Fred reborn"

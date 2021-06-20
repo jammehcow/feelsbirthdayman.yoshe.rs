@@ -19,7 +19,7 @@ export interface IPresentProps {
     src: string;
     width: string | number;
     title: string;
-    audioClip: string;
+    audioClip: string | undefined;
     volume?: number | undefined;
     revealDelay: number;
     footer?: JSX.Element | Array<JSX.Element> | undefined;
@@ -37,6 +37,11 @@ export const Present = ({title, src: imageSource, width, children, footer, audio
     }, [isModalOpen]);
 
     function open() {
+        if (!audioClip || hasOpened) {
+            setModalOpen(true);
+            return;
+        }
+
         const audioSource = new Audio(audioClip);
         if (!!volume) {
             audioSource.volume = volume;
