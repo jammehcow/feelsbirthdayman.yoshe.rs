@@ -19,7 +19,7 @@ export interface IPresentProps {
     src: string;
     width: string | number;
     title: string;
-    audioClip: string;
+    audioClip: string | undefined;
     volume?: number | undefined;
     revealDelay: number;
     footer?: JSX.Element | Array<JSX.Element> | undefined;
