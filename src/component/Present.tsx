@@ -37,6 +37,11 @@ export const Present = ({title, src: imageSource, width, children, footer, audio
     }, [isModalOpen]);
 
     function open() {
+        if (hasOpened) {
+            setModalOpen(true);
+            return;
+        }
+
         const audioSource = new Audio(audioClip);
         if (!!volume) {
             audioSource.volume = volume;
