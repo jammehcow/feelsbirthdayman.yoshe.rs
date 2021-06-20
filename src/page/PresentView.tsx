@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Heading, Image, LinkBox, LinkOverlay, ScaleFade, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 import {Present} from "../component";
 import pagChompImage from "/assets/PagChomp.3x.png";
@@ -16,6 +16,8 @@ export interface IPresentsViewProps {
 }
 
 export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
+    let [shouldPlayAudio, setShouldPlayAudio] = useState(true);
+
     return (
         <ScaleFade in={true}>
             <VStack shouldWrapChildren>
