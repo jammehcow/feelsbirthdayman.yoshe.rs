@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Image, LinkBox, LinkOverlay, ScaleFade, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, Image, LinkBox, LinkOverlay, ScaleFade, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 import {Present} from "../component";
@@ -33,6 +33,12 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                     <Text fontSize="lg" mt={4}>
                         Shitty images for shitty presents, pick one!
                     </Text>
+                    <Checkbox
+                          mt={10}
+                          defaultChecked
+                          onChange={(e) => setShouldPlayAudio(e.target.checked)}>
+                        Enable dramatic audio for presents
+                    </Checkbox>
                 </Box>
                 <Flex w="65vh"
                     mt={32}
