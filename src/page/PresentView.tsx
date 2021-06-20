@@ -41,7 +41,7 @@ export const PresentView = ({onAllOpened}: IPresentsViewProps) => {
                     </Checkbox>
                 </Box>
                 <Flex w="65vh"
-                    mt={32}
+                    mt={25}
                     ml="auto"
                     flexDir="row"
                     flexWrap="wrap"
