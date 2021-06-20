@@ -37,7 +37,7 @@ export const Present = ({title, src: imageSource, width, children, footer, audio
     }, [isModalOpen]);
 
     function open() {
-        if (hasOpened) {
+        if (!audioClip || hasOpened) {
             setModalOpen(true);
             return;
         }
